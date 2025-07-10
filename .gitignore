@@ -11,7 +11,7 @@
 !3dCalculations(C++)/src/exampleEntity.hpp
 !3dCalculations(C++)/src/include
 !3dCalculations(C++)/src/include/sharedResources.hpp
-!3dCalculations(C++)/src/include/vector.hpp
+!3dCalculations(C++)/src/include/vector3.hpp
 !3dCalculations(C++)/src/include/transform.hpp
 !3dCalculations(C++)/src/include/quaternion.hpp
 
