@@ -1,0 +1,17 @@
+*
+
+!.gitignore
+!README.md
+
+!3dCalculations(C++)
+!3dCalculations(C++)/README.md
+!3dCalculations(C++)/main.cpp
+!3dCalculations(C++)/demo.cpp
+!3dCalculations(C++)/src
+!3dCalculations(C++)/src/exampleEntity.hpp
+!3dCalculations(C++)/src/include
+!3dCalculations(C++)/src/include/sharedResources.hpp
+!3dCalculations(C++)/src/include/vector.hpp
+!3dCalculations(C++)/src/include/transform.hpp
+!3dCalculations(C++)/src/include/quaternion.hpp
+
