@@ -15,3 +15,8 @@
 !3dCalculations(C++)/src/include/transform.hpp
 !3dCalculations(C++)/src/include/quaternion.hpp
 
+!memoryHandler(C++)
+!memoryHandler(C++)/README.md
+!memoryHandler(C++)/main.cpp
+!memoryHandler(C++)/memBatch.hpp
+
