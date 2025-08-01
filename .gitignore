@@ -20,3 +20,13 @@
 !memoryHandler(C++)/main.cpp
 !memoryHandler(C++)/memBatch.hpp
 
+!tcpNetworkingLibrary(python)
+!tcpNetworkingLibrary(python)/README.md
+!tcpNetworkingLibrary(python)/nwMain.py
+!tcpNetworkingLibrary(python)/__init__.py
+!tcpNetworkingLibrary(python)/nwBatch.py
+!tcpNetworkingLibrary(python)/nwBuffer.py
+!tcpNetworkingLibrary(python)/nwItem.py
+!tcpNetworkingLibrary(python)/nwManager.py
+!tcpNetworkingLibrary(python)/nwPackage.py
+!tcpNetworkingLibrary(python)/nwTcp.py
