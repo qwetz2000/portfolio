@@ -1,5 +1,5 @@
-a small demo for the calculations involved in 3d translation, rotation and scaling
+A small demo for the calculations involved in 3D translation, rotation, and scaling.
 
-source files only
+Source files only.
 
-can be run by creating a c++ console solution (like with Visual Studio)
+Can be run by creating a C++ console solution (like with Visual Studio).

@@ -1,15 +1,15 @@
-a python TCP networking library
+A Python TCP networking library.
 
-example usage can be found under nwMain.py
+Example usage can be found under nwMain.py.
 
-allows usage as host aswell as client
+Allows usage as both host and client.
 
-is multithreaded to prevent the main programm from endless waiting for connnection
+Is multithreaded to prevent the main program from endless waiting for a connection.
 
-supports all data types
+Supports all data types.
 
-can be imported as nwLib as a python package
+Can be imported as nwLib as a Python package.
 
-allows multiple types of data to be handled at the same time
+Allows multiple types of data to be handled at the same time.
 
-for elaborate informations set the debugMode boolean in the NwManager construction Parameter
+For elaborate information, set the debugMode boolean in the NwManager construction parameter.
