@@ -9,7 +9,7 @@ class MemBatch
 	void*** allVars;
 	int nVars;
 
-	void extendData(const int& extendNBytes)
+	void extendData(const int& extendNBytes) // data is a unsigned char array, that holds the entire data of the batch
 	{
 		int newLength = length + extendNBytes;
 		if (newLength <= length) return;
@@ -25,7 +25,7 @@ class MemBatch
 		data = newData;
 	}
 
-	void extendAllVars()
+	void extendAllVars() // allVars is a void** array holding the memory adresses of pointers used to allocate partial data of the batch 
 	{
 		void*** newVars = new void**[nVars + 1];
 		if (nVars > 0)
@@ -37,7 +37,7 @@ class MemBatch
 		allVars = newVars;
 	}
 
-	void shrinkData()
+	void shrinkData() // resizes the data array to the minimum size required to hold the currently included batch data
 	{
 		int minLength = cursor - data;
 		if (minLength < 1) minLength = 1;
@@ -53,7 +53,7 @@ class MemBatch
 		data = newData;
 	}
 
-	void shrinkAllVars()
+	void shrinkAllVars() // resizes the allVars array to the minimum size given by the number of items in the batch
 	{
 		nVars--;
 		if (nVars < 1)
@@ -69,7 +69,7 @@ class MemBatch
 	}
 
 	template <typename T>
-	void remove(T* var, int element)
+	void remove(T* var, int element) // takes the pointer used to allocate the data and the index of the pointer adress within allVars and removes the item (used index is provided by the pop method)
 	{
 		int Tsize = sizeof(T);
 		int copyPosition = (unsigned char*)var - data;
@@ -90,7 +90,7 @@ class MemBatch
 	}
 
 public:
-	MemBatch(const int& startSize)
+	MemBatch(const int& startSize) // creates a batch with a given starting byte size
 	{
 		length = startSize;
 		if (length < 1) length = 1;
@@ -100,14 +100,14 @@ public:
 		allVars = nullptr;
 	}
 
-	~MemBatch()
+	~MemBatch() // releases remaining resources
 	{
 		delete[] data;
 		if (!(allVars == nullptr)) delete[]allVars;
 	}
 
 	template <typename T>
-	void request(T*& any)
+	void request(T*& any) // takes an pointer of any type and allocates memory within the batch, sets the given pointer to the new adress within the batch and copys data if the pointer already points to a variable (previously heap allocated variables have to be manages carefully to avoid memory leaks!)
 	{
 		int Tsize = sizeof(T);
 		int avaiableSpace = length - (cursor - data);
@@ -120,7 +120,7 @@ public:
 	}
 
 	template <typename T>
-	void pop(T* var)
+	void pop(T* var) // deallocates a in batch allocated variable with the same pointer used to allocate it
 	{
 		for (int i = 0; i < nVars; i++)
 		{

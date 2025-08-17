@@ -1,6 +1,4 @@
-#include "memManager.hpp"
-
-#include <iostream>
+#include "memBatch.hpp" // includes the souce file
 
 int main()
 {
